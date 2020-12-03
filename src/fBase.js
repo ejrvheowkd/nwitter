@@ -1,5 +1,5 @@
 import firebase from "firebase/app";
-
+import "firebase/auth";
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_API_KEY,
     authDomain:  process.env.REACT_APP_DATABASE_URL,
@@ -9,7 +9,10 @@ const firebaseConfig = {
     appId:  process.env.REACT_APP_APP_ID
   };
 
-  export default firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
+
+
+export const authService = firebase.auth();
 
   /*   authDomain: "nwitter-ddc3d.firebaseapp.com",
     projectId: "nwitter-ddc3d",
