@@ -1,6 +1,6 @@
 import firebase from "firebase/app";
 import "firebase/auth";
-import "firebase/database";
+import "firebase/firestore";
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_API_KEY,
     authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -16,6 +16,7 @@ export const firebaseInstance = firebase;
 
 export const authService = firebase.auth();
 
+export const dbService = firebase.firestore();
   /*   authDomain: "nwitter-ddc3d.firebaseapp.com",
     projectId: "nwitter-ddc3d",
     storageBucket: "nwitter-ddc3d.appspot.com",
